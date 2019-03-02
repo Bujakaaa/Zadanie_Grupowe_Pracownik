@@ -30,6 +30,7 @@ public class Magazyn {
         String pattern = "([a-zA-Z]+)\\s([a-zA-Z]+)\\s([0-9]+)\\s+([0-9]+)\\s([--9]+)";
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(dataOfEmplyee);
+        //m.find(); must be m.find() in the other way it doesn't get any matches
         if (m.find( )) {
             System.out.println("Imie : " + m.group(1) );
             System.out.println("Nazwisko : " + m.group(2) );
@@ -43,6 +44,20 @@ public class Magazyn {
         int age = Integer.parseInt(m.group(4));
         int salary = Integer.parseInt(m.group(5));
         listaPracownikow.add(new Pracownik(m.group(1), m.group(2), idNumber, age, salary));
+    }
+
+    public void deletePracownik(){
+        System.out.println("Podaj pesel pracownika, ktorego chcesz usunac");
+        long idNumber = Long.parseLong(scanner.nextLine());
+        for (Pracownik a : listaPracownikow){
+            if (a.getIdNumber() == idNumber){
+                listaPracownikow.remove(a);
+                break;  // it needs to have break to end the loop when it finds the object
+            }else {
+                System.out.println("Nie ma pracownika o takim id");
+            }
+        }
+
     }
 
     public List<Pracownik> getListaPracownikow() {

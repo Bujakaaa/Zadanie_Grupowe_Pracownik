@@ -13,6 +13,9 @@ public class Main {
 
         System.out.println(magazyn.getListaPracownikow());
 
+        magazyn.deletePracownik();
+
+        System.out.println(magazyn.getListaPracownikow());
 
 
 
