@@ -17,16 +17,8 @@ public class Pracownik {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getSurName() {
         return surName;
-    }
-
-    public void setSurName(String surName) {
-        this.surName = surName;
     }
 
     public long getIdNumber() {
@@ -41,17 +33,11 @@ public class Pracownik {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public int getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
 
     @Override
     public String toString() {

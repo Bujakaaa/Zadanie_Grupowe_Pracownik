@@ -13,6 +13,8 @@ public class Main {
 
         System.out.println(magazyn.getListaPracownikow());
 
+        magazyn.getPracownikByIdNumber();
+
         magazyn.deletePracownik();
 
         System.out.println(magazyn.getListaPracownikow());
