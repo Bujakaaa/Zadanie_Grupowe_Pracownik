@@ -15,5 +15,7 @@ public class Magazyn {
                 "listaPracownikow=" + listaPracownikow +
                 ", listaProduktów=" + listaProduktów +
                 '}';
+
+
     }
 }
