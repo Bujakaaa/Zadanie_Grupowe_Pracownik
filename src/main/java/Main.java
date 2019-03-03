@@ -20,6 +20,7 @@ public class Main {
         do {
             System.out.println("Co chcesz zrobić?");
             komenda = scanner.nextLine();
+
             if (komenda.equalsIgnoreCase("dodaj produkt")) {
                 System.out.println("Podaj nazwe produktu:");
                 String nazwa = scanner.nextLine();
@@ -36,8 +37,9 @@ public class Main {
                 System.out.println("Podaj nazwę produktu:");
                 String produkt = scanner.nextLine();
                 magazyn.usunProdukt(produkt);
+            }
 
-            } else if (komenda.equalsIgnoreCase("usun pracownika")) {
+            else if (komenda.equalsIgnoreCase("usun pracownika")) {
             }
 
             else if (komenda.equalsIgnoreCase("wypisz produkt")) {
