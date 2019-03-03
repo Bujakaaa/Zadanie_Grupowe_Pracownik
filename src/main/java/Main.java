@@ -24,17 +24,17 @@ public class Main {
             System.out.println("Co chcesz zrobic?");
             whatToDo = scanner.nextLine();
 
-            if(whatToDo.equalsIgnoreCase("dodaj pracownika")){
+            if (whatToDo.equalsIgnoreCase("dodaj pracownika")) {
                 magazyn.addPracownik();
-            }else if (whatToDo.equalsIgnoreCase("wyswietl dane pracownika")){
+            } else if (whatToDo.equalsIgnoreCase("wyswietl dane pracownika")) {
                 magazyn.getPracownikByIdNumber();
-            }else if (whatToDo.equalsIgnoreCase("usun pracownia")){
+            } else if (whatToDo.equalsIgnoreCase("usun pracownia")) {
                 magazyn.deletePracownik();
-            }else if (whatToDo.equalsIgnoreCase("wyswietl wszystkich pracownikow")){
+            } else if (whatToDo.equalsIgnoreCase("wyswietl wszystkich pracownikow")) {
                 magazyn.getListaPracownikow2();
             }
 
-        }while (!whatToDo.equalsIgnoreCase("quit"));
+        } while (!whatToDo.equalsIgnoreCase("quit"));
 
 
     }

@@ -6,8 +6,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Magazyn {
-   private List <Pracownik> listaPracownikow = new ArrayList<Pracownik>();
-   private List <String> listaProduktów = new ArrayList<String>();
+    private List<Pracownik> listaPracownikow = new ArrayList<Pracownik>();
+    private List<String> listaProduktów = new ArrayList<String>();
     Scanner scanner = new Scanner(System.in);
 
     public Magazyn(List<Pracownik> listaPracownikow, List<String> listaProduktów) {
@@ -24,20 +24,20 @@ public class Magazyn {
     }
 
 
-    public void addPracownik(){
+    public void addPracownik() {
         System.out.println("Podaj dane pracownika");
         String dataOfEmplyee = scanner.nextLine();
         String pattern = "([a-zA-Z]+)\\s([a-zA-Z]+)\\s([0-9]+)\\s+([0-9]+)\\s([--9]+)";
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(dataOfEmplyee);
         //m.find(); must be m.find() in the other way it doesn't get any matches
-        if (m.find( )) {
-            System.out.println("Imie : " + m.group(1) );
-            System.out.println("Nazwisko : " + m.group(2) );
-            System.out.println("Pesel : " + m.group(3) );
-            System.out.println("Wiek: " + m.group(4) );
-            System.out.println("Wynagrodzenie : " + m.group(5) );
-        }else {
+        if (m.find()) {
+            System.out.println("Imie : " + m.group(1));
+            System.out.println("Nazwisko : " + m.group(2));
+            System.out.println("Pesel : " + m.group(3));
+            System.out.println("Wiek: " + m.group(4));
+            System.out.println("Wynagrodzenie : " + m.group(5));
+        } else {
             System.out.println("Nie udalo sie znalezc poszukiwanych informacji");
         }
         long idNumber = Long.parseLong(m.group(3));
@@ -46,10 +46,10 @@ public class Magazyn {
         listaPracownikow.add(new Pracownik(m.group(1), m.group(2), idNumber, age, salary));
     }
 
-    public void deletePracownik(){
+    public void deletePracownik() {
         System.out.println("Podaj pesel pracownika, ktorego chcesz usunac");
         long idNumber = Long.parseLong(scanner.nextLine());
-        for (Pracownik a : listaPracownikow){
+        for (Pracownik a : listaPracownikow) {
             if (a.getIdNumber() == idNumber) {
                 listaPracownikow.remove(a);
                 break;  // it needs to have break to end the loop when it finds the object
@@ -58,17 +58,17 @@ public class Magazyn {
 
     }
 
-    public void getPracownikByIdNumber(){
+    public void getPracownikByIdNumber() {
         System.out.println("Podaj pesel pracownika, ktorego dane chcesz wystwietlic");
         long idNumber = Long.parseLong(scanner.nextLine());
-        for (Pracownik a : listaPracownikow){
+        for (Pracownik a : listaPracownikow) {
             if (a.getIdNumber() == idNumber) {
-                System.out.println(a);;
+                System.out.println(a);
+                ;
                 break;  // it needs to have break to end the loop when it finds the object
             }
         }
     }
-
 
 
     public List<Pracownik> getListaPracownikow() {
