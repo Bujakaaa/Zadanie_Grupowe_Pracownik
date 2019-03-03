@@ -50,11 +50,9 @@ public class Magazyn {
         System.out.println("Podaj pesel pracownika, ktorego chcesz usunac");
         long idNumber = Long.parseLong(scanner.nextLine());
         for (Pracownik a : listaPracownikow){
-            if (a.getIdNumber() == idNumber){
+            if (a.getIdNumber() == idNumber) {
                 listaPracownikow.remove(a);
                 break;  // it needs to have break to end the loop when it finds the object
-            }else {
-                System.out.println("Nie ma pracownika o takim id");
             }
         }
 
@@ -64,20 +62,23 @@ public class Magazyn {
         System.out.println("Podaj pesel pracownika, ktorego dane chcesz wystwietlic");
         long idNumber = Long.parseLong(scanner.nextLine());
         for (Pracownik a : listaPracownikow){
-            if (a.getIdNumber() == idNumber){
+            if (a.getIdNumber() == idNumber) {
                 System.out.println(a);;
                 break;  // it needs to have break to end the loop when it finds the object
-            }else {
-                System.out.println("Nie ma pracownika o takim id");
             }
         }
-
     }
 
 
 
     public List<Pracownik> getListaPracownikow() {
         return listaPracownikow;
+    }
+
+    public void getListaPracownikow2() {
+        for (Pracownik a : listaPracownikow) {
+            System.out.println(a);
+        }
     }
 
     public void setListaPracownikow(List<Pracownik> listaPracownikow) {
