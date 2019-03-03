@@ -74,6 +74,8 @@ public class Magazyn {
 
     }
 
+
+
     public List<Pracownik> getListaPracownikow() {
         return listaPracownikow;
     }
