@@ -20,7 +20,7 @@ public class MainMy {
 
         magazyn.usunProdukt("masło");
 
-        System.out.println(magazyn.wypiszProdukt("mąka")); //dziala :)
+        System.out.println(magazyn.wypiszProdukt("masło")); //dziala :)
         System.out.println();
 
         System.out.println(magazyn.wypiszAllProdukty()); //dziala
